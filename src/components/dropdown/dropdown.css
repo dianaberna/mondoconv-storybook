@@ -1,0 +1,96 @@
+@import "/index.css";
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__button {
+    appearance: none;
+    background: transparent;
+    display: flex;
+    border: 0;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    padding: 3px 0;
+}
+
+.button--iconLabelCart {
+    flex-direction: column;
+}
+
+.button--iconLabelCart > span.labelOnTopRight {
+    background-color: var(--secondario-base);
+    color: var(--base-bianco);
+    position: absolute;
+    right: 0rem;
+    top: -0.2rem;
+    border-radius: 1rem;
+    padding: 0 0.25rem;
+}
+
+.button--onlyLabel {
+    text-transform: uppercase;
+    font-family: var(--font-family-menu) !important;
+}
+
+.button--onlyLabel[aria-expanded="true"] {
+    border-bottom: 3px solid #e30613;
+}
+
+.button--onlyLabel + .dropdown__content {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.button--iconLabelCart + .dropdown__content,
+.button--onlyLabel + .dropdown__content {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1490196078);
+    border: 1px solid var(--base--9);
+}
+
+.dropdown__content {
+    position: relative;
+    left: 0;
+    margin-top: 12px;
+    width: fit-content;
+    background: #fff 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    z-index: 100;
+    display: none;
+    padding: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown__content[aria-expanded="true"] {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown__content::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 1rem;
+    height: 14px;
+    width: 14px;
+    transform: rotate(45deg);
+    background: var(--base-bianco) 0% 0% no-repeat padding-box;
+}
+
+.button--iconLabelCart + .dropdown__content::before,
+.button--onlyLabel + .dropdown__content::before {
+    border-top: 1px solid var(--base--9);
+    border-left: 1px solid var(--base--9);
+}

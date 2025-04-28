@@ -1,0 +1,72 @@
+@import "/index.css";
+
+.link{
+    display: flex;
+    text-decoration: none;
+    width: max-content;
+}
+
+.link--header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--base-80);
+    gap: 0.5rem;
+    text-transform: initial;
+    font-size: 11px;
+    font-weight: 300;
+}
+.link--header > svg{ 
+    color: var(--base-60);
+}
+
+.link--tag{
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    color: var(--base-90);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.link--inlineWithIcon{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--base-80);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease; 
+}
+
+.link--inlineWithIcon > svg {
+    fill: var(--base-90);
+}
+
+.link--inlineWithIcon:hover, .link--inlineWithIcon:focus{
+    gap: 16px;
+}
+
+.link--inline{
+    color: var(--base-80);
+}
+.link--inline:hover{
+    color: var(--secondario-base);
+}
+
+.link-border{
+    border: 2px solid var(--base-34);
+}
+
+.link-border.active{
+    color: var(--primario-base);
+    border: 2px solid var(--primario-base);
+}
+
+.link-borderradius{
+    border-radius: 40px;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: 400;
+    color: var(--base-90);
+}

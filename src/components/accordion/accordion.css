@@ -1,0 +1,59 @@
+@import "/index.css";
+
+summary::marker {
+    content: "";
+}
+
+.accordion {
+    font-family: var(--font-family, sans-serif);
+    border-bottom: 1px solid var(--base-60);
+    background-color: var(--base-bianco);
+    overflow: hidden;
+    width: 100%;
+}
+
+.accordion details {
+    width: 100%;
+}
+
+.accordion__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    list-style: none;
+}
+
+.accordion__summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion__label {
+    flex: 1;
+}
+
+.accordion__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+summary > span:nth-child(1).accordion__icon {
+    padding-right: 1.5rem;
+}
+
+.accordion__content {
+    padding: 0 16px 16px;
+}
+
+details:not([open]) .tipo_freccia_alto {
+    display: none;
+}
+
+details[open] .tipo_freccia_basso {
+    display: none;
+}

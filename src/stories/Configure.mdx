@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduzione e configurazione" />
+
+# Mondoconv Storybook UI Kit
+
+Benvenuto/a nella documentazione ufficiale del progetto **Mondoconv UI Kit**.
+
+Questo progetto fornisce una libreria di Web Components personalizzati, sviluppati con [Lit](https://lit.dev/) e documentati attraverso [Storybook](https://storybook.js.org/).
+
+---
+
+## 🧩 Contenuti principali
+
+- **Button** – Pulsanti versatili con supporto per icone, varianti di stile e stati.
+- **Link** – Link personalizzati per diverse varianti visive.
+- **Accordion** – Componente espandibile per contenuti nascosti.
+- **Modal** – Finestra di dialogo modale accessibile.
+- **Tabs** – Navigazione a schede completamente accessibile.
+- **Dropdown** – Menu a discesa con opzioni dinamiche e icone.
+- **Card** – Box contenente immagine, testo e link.
+- **Carousel** – Carosello di immagini o contenuti, multi-slide, accessibile.
+
+---
+
+## 🚀 Come utilizzare il progetto
+
+### Installazione
+
+Clona la repository e installa le dipendenze:
+
+```bash
+git clone https://github.com/inclusio-dev/mc-storybook.git
+cd mc-storybook
+npm install
+```
+
+## 🛠️ Script Automatico per Icone
+
+Per gestire dinamicamente le icone e aggiornare le stories relative, è disponibile uno script automatico:
+
+- **Script:** `updateIconsAndStories.js`
+- **Comando rapido:** `npm run update-icons`
+
+Questo script esegue:
+- La generazione dell'elenco aggiornato delle icone SVG disponibili
+- L'aggiornamento automatico delle stories in Storybook
+
+> 📌 Ricorda: ogni volta che si aggiunge una nuova icona, eseguire `npm run update-icons` per mantenere la documentazione aggiornata.

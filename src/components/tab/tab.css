@@ -1,0 +1,55 @@
+@import "/index.css";
+
+.tabs > div:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
+
+    justify-content: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid var(--base-60);
+}
+
+.tab-button {
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0px;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin-bottom: -1px;
+}
+
+.tab-button:hover,
+.tab-button:focus,
+.tabpanel:focus {
+    color: var(--secondario-base);
+}
+
+span:has(.tab-button) {
+    border-bottom: 4px solid transparent;
+    gap: 10px;
+}
+span:has(.tab-button--active) {
+    border-bottom: 4px solid var(--secondario-base);
+}
+
+span:has(.tab-button--pieno) {
+    padding-bottom: 7px;
+}
+
+.tabpanel {
+    padding: 1rem;
+}
+
+.tabpanel.is-hidden {
+    display: none;
+}
+
+.tab-button--pieno.tab-button--active {
+    background-color: var(--secondario-base);
+    color: var(--base-bianco);
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border-radius: 2rem;
+    width: fit-content;
+}

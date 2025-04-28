@@ -1,0 +1,166 @@
+@import "/index.css";
+
+.button {
+    cursor: pointer;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+
+    font-weight: 700;
+    font-size: var(--font-size-default);
+    text-transform: uppercase;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.button-normal {
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+.button-rounded.button-iconsmall,
+.button-rounded.button-iconmedium,
+.button-rounded.button-iconlarge {
+    border-radius: 2rem;
+    padding: 0.75rem;
+}
+
+.button-width-fitcontent {
+    width: fit-content;
+}
+.button-width-fixed {
+    min-width: 16rem;
+}
+.button-height-fitcontent {
+    /* padding: 0.35rem 0.75rem; */
+    padding: 0.5rem 0.5rem;
+}
+.button-height-fixed {
+    min-height: 3rem;
+}
+
+.button-iconsmall > svg {
+    width: 1rem;
+    height: 1rem;
+}
+.button-iconmedium > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.button-iconlarge > svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.button--primario-pieno {
+    background-color: var(--primario-base);
+    color: var(--base-bianco);
+}
+.button--primario-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--primario-pieno:hover {
+    background-color: var(--primario-scuro);
+}
+.button--primario-contorno {
+    box-sizing: border-box;
+    background-color: var(--base-bianco);
+    color: var(--primario-base);
+    border: 2px solid var(--primario-base);
+}
+.button--primario-contorno:hover {
+    border-color: var(--primario-scuro);
+}
+
+.button--secondario-pieno {
+    background-color: var(--secondario-base);
+    color: var(--base-bianco);
+}
+.button--secondario-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--secondario-pieno:hover {
+    background-color: var(--secondario-scuro);
+}
+.button--secondario-contorno {
+    background-color: var(--base-bianco);
+    color: var(--secondario-base);
+    border: 2px solid var(--secondario-base);
+}
+.button--secondario-contorno:hover {
+    border-color: var(--secondario-scuro);
+}
+
+.button--terziario-pieno {
+    background-color: var(--terziario-base);
+    color: var(--base-bianco);
+}
+.button--terziario-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--terziario-pieno:hover {
+    background-color: var(--terziario-scuro);
+}
+
+.button--dolcecasa-pieno {
+    background-color: var(--dolcecasa-default);
+    color: var(--base-bianco);
+}
+.button--dolcecasa-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--dolcecasa-pieno:hover {
+    background-color: var(--dolcecasa-scuro);
+}
+
+.button--dolcecasanero-pieno {
+    background-color: var(--dolcecasa-nero);
+    color: var(--base-bianco);
+}
+.button--dolcecasanero-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--findomestic-pieno {
+    background-color: var(--findomestic);
+    color: var(--base-bianco);
+    text-transform: none;
+    padding: 0 var(--gap) 0 0;
+}
+.button--carrello-pieno {
+    height: 6.25rem;
+    width: 31.25rem;
+    background-color: var(--primario-base);
+    color: var(--base-bianco);
+    font-size: 1rem;
+    justify-content: space-between;
+}
+.button--carrello-pieno > svg {
+    fill: var(--base-bianco);
+}
+.button--carrello-pieno:hover {
+    background-color: var(--primario-scuro);
+}
+
+.button--small {
+    padding: 10px 16px;
+    font-size: 12px;
+}
+.button--medium {
+    padding: 11px 20px;
+    font-size: 14px;
+}
+.button--large {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.button:disabled,
+.button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
